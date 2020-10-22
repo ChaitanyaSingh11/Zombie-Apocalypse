@@ -168,6 +168,14 @@ function draw() {
         ground2.velocityX = 0;
         scoreImg.visible = false;
         restart.visible = true;
+        push();
+        fill("HotPink");
+        stroke("Cyan");
+        textSize(72);
+        strokeWeight(10);
+        text("GAME OVER", 220, 200);
+        pop();
+        
         if (mouseWentDown("left") && mousePressedOver(restart) && gameState == "over") {
             restart.changeImage("restart2", restart2);
         } else if (mouseWentUp("left") && mouseIsOver(restart) && gameState == "over") {
